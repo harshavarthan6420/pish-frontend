@@ -19,7 +19,7 @@ function App() {
   const [activePlace, setActivePlace] = useState([{}]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/getPlaces").then((response) => {
+    Axios.get("https://pish-server.onrender.com/getPlaces").then((response) => {
       setPlaceList(response.data);
     });
   }, []);
