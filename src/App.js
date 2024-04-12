@@ -12,7 +12,7 @@ import Register from "./components/Register";
 import {Toaster} from 'react-hot-toast';
 import Newsletter from "./pages/Newsletters";
 
-Axios.defaults.baseURL='http://localhost:3002';
+Axios.defaults.baseURL='https://pish-user.onrender.com';
 
 function App() {
   const [placeList, setPlaceList] = useState([{}]);
