@@ -25,9 +25,9 @@ const Login  = () =>  {
     const{username,password}=data
     
     try{
-      const {data}=await axios.post('/login',{
+      const {data}=await axios.post('https://pish-user.onrender.com/login',{
         username,password
-      })
+      },{withCredentials: true})
       if(data.error){
         toast.error(data.error)
       }
