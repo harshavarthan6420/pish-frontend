@@ -21,13 +21,14 @@ const Register = () => {
     e.preventDefault();
     const { fname, lname, email, username, password } = data;
     try {
-      const { data } = await axios.post("/register", {
+      const { data } = await axios.post("https://pish-user.onrender.com/register", {
         fname,
         lname,
         email,
         username,
         password,
-      });
+      },
+      {withCredentials: true});
       if (data.error) {
         toast.error(data.error);
       } else {
